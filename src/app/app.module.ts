@@ -14,10 +14,12 @@ import {BasicHighlightDirective} from "./directives/basic-highlight.directive";
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import {FormsModule} from "@angular/forms";
+import {WorkingWithCustomPipesComponent} from "./working-with-custom-pipes/working-with-custom-pipes.component";
+import {ShortenPipe} from "./pipes/shorten.pipe";
+import {FilterPipe} from "./pipes/filter.pipe";
 
 @NgModule({
   declarations: [
-    AppComponent
     AppComponent,
     RecipeBookComponent,
     ShoppingListComponent,
@@ -30,6 +32,9 @@ import {FormsModule} from "@angular/forms";
     BasicHighlightDirective,
     BetterHighlightDirective,
     UnlessDirective,
+    ShortenPipe,
+    FilterPipe,
+    WorkingWithCustomPipesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <br><br>
+      <input type="text" [(ngModel)]="filterStatus">
+      <hr>
+      <button class="btn btn-primary" (click)="onAddNewClass()">Add new Class</button>
+      <hr>
+      {{asyncVariable | async}}
+      <hr>
+
+
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let angClass of angClasses | filter:filterStatus:'status'"
+        >
+          <span class="badge">{{angClass.status}}</span>
+          <strong>{{angClass.name | shorten: 24}}</strong> |
+          {{angClass.type | uppercase}} |
+          {{angClass.started | date: 'fullDate' | uppercase}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
