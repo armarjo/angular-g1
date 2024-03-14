@@ -1,10 +1,16 @@
 <div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 input-group">
+      <label for="name">Type recipe name</label>
+      <input #inputField class="form-control" id="name">
+    </div>
+    <button (click)="addRecipe()" class="btn btn-success">New Recipe</button>
+  </div>
   <div class="col-md-5">
-    <app-recipe-list (addNew)="onAddNewClicked($event)"></app-recipe-list>
+    <app-recipe-list></app-recipe-list>
   </div>
-  <div class="col-md-7">
-    <input>
-    <app-recipe-details>
-    </app-recipe-details>
-  </div>
+<!--  <div class="col-md-7">-->
+<!--    <app-recipe-details>-->
+<!--    </app-recipe-details>-->
+<!--  </div>-->
 </div>

@@ -10,21 +10,21 @@ export class RecipeItemComponent implements OnInit, DoCheck, AfterViewInit, Afte
  @Input('recipeData2') recipeData !: RecipeListModel;
 
   ngOnInit(): void {
-    console.log('OnInit executed');
+    // console.log('OnInit executed');
   }
 
   ngDoCheck(): void {
-    console.log(this.recipeData)
-    console.log('MY DoCheck executed');
+    // console.log(this.recipeData)
+    // console.log('MY DoCheck executed');
   }
 
   ngAfterViewChecked(): void {
-    console.log('AfterViewChecked executed');
+    // console.log('AfterViewChecked executed');
   }
 
   ngAfterViewInit(): void {
   }
   ngOnDestroy(): void {
-    console.log('OnDestroy executed');
+    // console.log('OnDestroy executed');
   }
 }

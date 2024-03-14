@@ -17,6 +17,8 @@ import {FormsModule} from "@angular/forms";
 import {WorkingWithCustomPipesComponent} from "./working-with-custom-pipes/working-with-custom-pipes.component";
 import {ShortenPipe} from "./pipes/shorten.pipe";
 import {FilterPipe} from "./pipes/filter.pipe";
+import {LogingService} from "./services/loging.service";
+import {RecipeService} from "./services/recipe.service";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,7 @@ import {FilterPipe} from "./pipes/filter.pipe";
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LogingService, RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
